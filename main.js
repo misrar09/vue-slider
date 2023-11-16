@@ -29,10 +29,7 @@ const vueApp = {
                 }
             ],
 
-
             activeImage: 0, // created slide counter
-
-      
 
         }
 
@@ -40,7 +37,6 @@ const vueApp = {
 
     methods: { // methods with functions
 
- 
         btnDown() {  // down button function with condition to roll down the slides
 
             if (this.activeImage < this.slides.length - 1) {
@@ -74,7 +70,6 @@ const vueApp = {
     }
 
 }
-
 
 
 createApp(vueApp).mount("#app");
