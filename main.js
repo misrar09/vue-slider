@@ -30,13 +30,17 @@ const vueApp = {
             ],
 
 
-            activeImage: 0 // created slide counter
+            activeImage: 0, // created slide counter
+
+      
 
         }
 
     },
 
     methods: { // methods with functions
+
+ 
         btnDown() {  // down button function with condition to roll down the slides
 
             if (this.activeImage < this.slides.length - 1) {
@@ -57,10 +61,21 @@ const vueApp = {
                 this.activeImage = this.slides.length - 1;
             }
 
+        },
+
+        slideShow() {
+            setInterval(this.btnDown, 3000)
         }
 
+    },
+
+    mounted(){
+        this.slideShow();   
     }
+
 }
+
+
 
 createApp(vueApp).mount("#app");
 
