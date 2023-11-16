@@ -14,20 +14,17 @@
 
     <div id="app">
 
-<!--         <div class="container"> -->
+        <div class="container"> 
 
-            <img src= "" alt="">
-            <h2></h2>
+            <img :src="slides[activeImage].image" alt="">
+            <h2>{{slides[activeImage].title}}</h2>
+            <p>{{slides[activeImage].text}}</p>
+
             
-<!--             <button class="btnUp"><i class="fa-solid fa-angle-up"></i></i></button>
-            <button class="btnDown"><i class="fa-solid fa-angle-down"></i></button> -->
-
-<!--         </div> -->
-<!--         <div>
-            <button class="start">Start Slide Show</button>
-            <button class="stop">Stop Slide Show</button>
-
-        </div> -->
+        </div>
+        
+        <button @click="btnUp()" :class="{ 'btnUp': true }"><i class="fa-solid fa-angle-up"></i></button>
+        <button @click="btnDown()" :class="{ 'btnDown': true }"><i class="fa-solid fa-angle-down"></i></button>
     </div>
 
     <script src="main.js"></script>
