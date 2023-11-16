@@ -15,16 +15,16 @@
     <div id="app">
 
         <div class="container"> 
-
+            <!-- retiving info from data (Vue JS) -->
+            <span class="id">{{slides[activeImage].id}}</span>
             <img :src="slides[activeImage].image" alt="">
             <h2>{{slides[activeImage].title}}</h2>
             <p>{{slides[activeImage].text}}</p>
 
-            
         </div>
-        
-        <button @click="btnUp()" :class="{ 'btnUp': true }"><i class="fa-solid fa-angle-up"></i></button>
-        <button @click="btnDown()" :class="{ 'btnDown': true }"><i class="fa-solid fa-angle-down"></i></button>
+        <!-- Created buttons suing methods from Vue JS -->
+        <button @click="btnUp()" class="btnUp"><i class="fa-solid fa-angle-up"></i></button>
+        <button @click="btnDown()" class="btnDown"><i class="fa-solid fa-angle-down"></i></button>
     </div>
 
     <script src="main.js"></script>
