@@ -71,7 +71,7 @@ const vueApp = {
             this.autoPlay = setInterval(this.btnDown, 3000)
         },
 
-        hoverStop(){
+        SliderStop(){
             clearInterval(this.autoPlay)
         },
 

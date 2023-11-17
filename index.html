@@ -17,7 +17,7 @@
         <img v-for="(img, i) in slides" :key="i" @click="changeSlide(i)" :src="img.image" :class="{imgActive: (i==activeImage)
         }" class="smallImages" alt="">
 
-        <div  @mouseover="hoverStop()" @mouseleave="hoverRemove()" class="container"> 
+        <div  @mouseover="SliderStop()" @mouseleave="hoverRemove()" class="container"> 
             <!-- retiving info from data (Vue JS) -->
             <span  class="id">{{activeImage + 1}}</span> <!-- created slide counter on the page -->
             <img :src="slides[activeImage].image" alt="">
