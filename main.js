@@ -38,23 +38,32 @@ const vueApp = {
 
         btnDown() {  // down button function with condition to roll down the slides
 
-            if (this.activeImage < this.slides.length - 1) {
+/*             if (this.activeImage < this.slides.length - 1) {
                 this.activeImage++;
             }
             else {
                 this.activeImage = 0;
-            }
+            } */
+
+            this.activeImage < this.slides.length - 1 ? this.activeImage++ : this.activeImage = 0
+
         },
 
         btnUp() { // up button function with condition to roll up the solde show
 
-            if (this.activeImage > 0) {
+/*             if (this.activeImage > 0) {
                 this.activeImage--;
             }
             else {
                 this.activeImage = this.slides.length - 1;
-            }
+            } */
 
+            this.activeImage > 0 ? this.activeImage-- : this.activeImage = this.slides.length - 1
+
+        },
+        //function to change slide on page, called with index in DOM
+        changeSlide(n){
+            this.activeImage = n;
         },
 
         slideShow() {

@@ -14,17 +14,20 @@
 
     <div id="app">
 
+        <img v-for="(img, i) in slides" :key="i" @click="changeSlide(i)" :src="img.image" :class="{imgActive: (i==activeImage)
+        }" class="smallImages" alt="">
+
         <div class="container"> 
             <!-- retiving info from data (Vue JS) -->
             <span class="id">{{activeImage + 1}}</span> <!-- created slide counter on the page -->
             <img :src="slides[activeImage].image" alt="">
             <h2>{{slides[activeImage].title}}</h2>
             <p>{{slides[activeImage].text}}</p>
+            <button @click="btnUp()" class="btnUp"><i class="fa-solid fa-angle-up"></i></button>
+            <button @click="btnDown()" class="btnDown"><i class="fa-solid fa-angle-down"></i></button>
 
         </div>
         <!-- Created buttons following methods from Vue JS -->
-        <button @click="btnUp()" class="btnUp"><i class="fa-solid fa-angle-up"></i></button>
-        <button @click="btnDown()" class="btnDown"><i class="fa-solid fa-angle-down"></i></button>
     </div>
 
     <script src="main.js"></script>

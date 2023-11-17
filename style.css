@@ -83,3 +83,15 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.377);
 
 }
+
+.smallImages{
+    width: 100px;
+    height: 100px;
+    margin: 3rem;
+    opacity: 0.5;
+
+}
+
+.imgActive{
+    opacity: 1;
+}
