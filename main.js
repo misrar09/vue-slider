@@ -29,7 +29,7 @@ const vueApp = {
             ],
 
             activeImage: 0, // created slide counter
-
+            autoPlay: null,
         }
 
     },
@@ -45,6 +45,7 @@ const vueApp = {
                 this.activeImage = 0;
             } */
 
+            // ternary way to write if else
             this.activeImage < this.slides.length - 1 ? this.activeImage++ : this.activeImage = 0
 
         },
@@ -57,7 +58,7 @@ const vueApp = {
             else {
                 this.activeImage = this.slides.length - 1;
             } */
-
+            // ternary way to write if else
             this.activeImage > 0 ? this.activeImage-- : this.activeImage = this.slides.length - 1
 
         },
@@ -67,7 +68,15 @@ const vueApp = {
         },
 
         slideShow() {
-            setInterval(this.btnDown, 3000)
+            this.autoPlay = setInterval(this.btnDown, 3000)
+        },
+
+        hoverStop(){
+            clearInterval(this.autoPlay)
+        },
+
+        hoverRemove(){
+            this.slideShow()
         }
     },
 

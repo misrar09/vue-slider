@@ -40,9 +40,10 @@ body {
 
 }
 
-.container>div.inAction {
-    display: flex;
+.container:hover{
+    cursor: pointer;
 }
+
 
 button {
     border: none;
