@@ -1,7 +1,6 @@
 //TRACCIA C - Slides with numbered steps
 //Image, title and text are enclosed in a card, one under the other, and will have a number that starts from 1 and gradually increases in a corner of the slide
 
-
 const { createApp } = Vue;
 
 const vueApp = {
@@ -10,19 +9,19 @@ const vueApp = {
                     // slides array with objects
             slides: [
                 {
-                    id: 1,
+                   
                     image: 'https://img.freepik.com/free-vector/welcome-pattern-different-languages_23-2147870141.jpg',
                     title: 'Benvenuti nel nostro sito',
                     text: 'Esplora la nostra vasta gamma di prodotti e scopri offerte speciali.'
                 },
                 {
-                    id: 2,
+                    
                     image: 'https://img.freepik.com/free-vector/spring-sale-instagram-post_23-2148849921.jpg',
                     title: 'Nuova collezione primavera',
                     text: 'Scopri le ultime tendenze della moda con la nostra collezione primavera.'
                 },
                 {
-                    id: 3,
+                    
                     image: 'https://img.freepik.com/free-vector/special-offer-modern-sale-banner-template_1017-20667.jpg',
                     title: 'Offerte speciali',
                     text: 'Approfitta delle nostre offerte speciali. Sconti incredibili solo per te!'
@@ -45,7 +44,6 @@ const vueApp = {
             else {
                 this.activeImage = 0;
             }
-
         },
 
         btnUp() { // up button function with condition to roll up the solde show
@@ -62,7 +60,6 @@ const vueApp = {
         slideShow() {
             setInterval(this.btnDown, 3000)
         }
-
     },
 
     mounted(){
@@ -70,7 +67,6 @@ const vueApp = {
     }
 
 }
-
 
 createApp(vueApp).mount("#app");
 
